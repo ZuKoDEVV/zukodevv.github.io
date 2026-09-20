@@ -1,0 +1,180 @@
+.Center {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
+
+.Padding{
+    padding: 10px;
+}
+
+#FullImage{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+}
+
+#FullImage div{
+    background-color: rgba(0, 0, 0, 0.445);
+    z-index: -3;
+
+    position: fixed;
+    object-fit: cover;
+
+    width: 100%;
+    height: 100%;
+}
+
+#FullImage img{
+    width: 80%;
+    height: 80%;
+
+    position: fixed;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#FullImage button{
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+    z-index: -1;
+}
+
+.gridContainer{
+    position: relative;
+    display: flex;
+    flex: 25px;
+    flex-direction: row; 
+
+    align-items: center;
+    gap: 20px;
+}
+
+a{
+    color: aqua;
+}
+
+button{
+    background-color: rgb(49, 49, 49);
+    cursor: pointer;
+    color: aliceblue;
+
+    border-radius: 20px;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.selected{
+    background-color: rgb(73, 84, 87);
+    color: rgb(190, 213, 255);
+
+    border-color: aqua;
+}
+
+.gridItem{
+    padding: 10px;
+}
+
+.centerOnlyText{
+    text-align: center;
+}
+
+.Biography{
+    width: 70%;
+}
+
+#Desc{
+    text-align: left;
+}
+
+p{
+    white-space: pre-wrap;
+}
+
+.ignoreLeft{
+    left: 0px;
+}
+
+.LayerItem {
+    position: relative;
+
+    padding: 15px;
+
+    top: 15px;
+}
+
+.IgnorePadding {
+    padding: 0px
+}
+
+.DontCenter{
+    align-self: start;
+    text-align: start;
+}
+
+input[type="date" i]{
+    background: transparent;
+    color: white;
+    border: transparent;
+    text-align: center;
+}
+
+#RandomCat {
+    cursor: pointer;
+    color: rgb(252, 137, 91);
+}
+
+.parentesi {
+    color: rgba(255, 255, 255, 0.26);
+    font-size: medium;
+}
+
+.BlurBackground {
+    background-color: rgba(0, 0, 0, 0.151); 
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+html {
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+
+    color: white;
+
+    width: 100%;
+    height: 100vh;
+    background-image: image-set("Images/background.jpg");
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
+}
+
+.hide{
+    display: none;
+}

@@ -1,0 +1,33 @@
+.galeria-flex {
+    display: flex;         /* Pone los contenedores en línea horizontal */
+    flex-wrap: wrap;       /* Si no caben, saltan a la siguiente línea */
+    gap: 3px;             /* Agrega espacio de separación entre ellos */
+
+    overflow:auto;
+    overflow-x: hidden;
+
+    width: 330px;
+    height: 300px;
+}
+
+.image-container {
+  width: 150px;          /* Define un ancho fijo o dinámico */
+  height: 150px;
+  overflow: hidden;
+
+  border-radius: 20px;
+}
+
+.image-container img:hover{
+    transform: scale(1.1)
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.3s ease-in-out;
+
+  cursor: pointer;
+}

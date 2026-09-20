@@ -1,0 +1,12 @@
+.reveal {
+  opacity: 0;
+  animation: fadeIn linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

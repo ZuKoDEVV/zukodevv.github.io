@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="ZuKoStyle.css">
+<link rel="stylesheet" href="Gallery.css">
+<link rel="stylesheet" href="RevealOnScroll.css">
+<script src="wa.js" defer></script>
+
+<html lang="es">
+<meta charset="UTF-8">
+
+<head>
+    <title>ZuKo Page!</title>
+</head>
+
+<body>
+    <div id = "FullImage" class="hide">
+        <img src="Images/background.jpg">
+        <button id="CloseBigImage">wa</button>
+        <div></div>
+    </div>
+
+    <div class="Center BlurBackground">
+        <h1 class="LayerItem ignoreTop">
+            Hola a todos, yo soy ZuKomaDEV y me gustan los katos <span class="parentesi">(es obio ya c)</span>
+        </h1>
+
+        <p class="LayerItem">
+            <span style="color: deeppink; font-weight: bolder; font-size: larger;">Yo amo:</span> Crear Juegos, los gatos <span id="RandomCat">Naranja</span>, Programar, a mis amigos y a mi familia :3 <span class="parentesi">y tambien colocar el :3 al final de todo</span>
+        </p>
+
+        <div class="Padding">
+            <button class="gridItem" id = "AboutMe">Sobre mi</button>
+            <button class="gridItem" id = "AboutMe">Mis proyectos</button>
+        </div>
+    </div>
+
+    <div id="AboutMe">
+        <div class = "LayerItem BlurBackground Center">
+            <h1 class="ignoreTop">Sobre mi :3</h1>
+            <p>Yo soy Johan Alvarez o menos conocido en internet como ZuKo <span class="parentesi">(no mencionen nada del Zuko de Avatar pq no lo conocia)</span> o ZuKoma<br></p>
+            <br>
+            <h2>Mi información de Nacimiento</h2>
+            
+            <p>Naci en Colombia y aun vivo aqui hasta el día de hoy<br>Tengo 16 años y naci el <input type="date" value="2010-06-18" disabled> (18 de Junio del 2010)</p>
+            
+        </div>
+    </div>
+
+    <!-- MY PROYECTS SELECTORS -->
+    <div id="Proyects">
+        <div class="LayerItem ignoreTop gridContainer">
+            <div class="Padding gridContainer BlurBackground", id="ProyectsButtonContainer">
+                <h2 class="gridItem">My proyects:</h2>
+
+                <button class="gridItem hide" id = "ProyectButton">EZR (Ezquivar Rewrited)</button>
+            </div>
+        </div>
+
+        <!-- MY PROYECTS SHOW -->
+        <div id = "ContainerProyects">
+
+            <div class="Center LayerItem gridContainer hide" id="divProyects">
+
+                <div class = "galeria-flex gridItem BlurBackground Padding" id = "ContainerPreviews">
+                    <div class="image-container" class = "hide" id = "PreviewGameImage">
+
+                        <img src="" alt="">
+
+                    </div>
+                </div>
+                
+                <div class="DontCenter BlurBackground Padding Biography">
+                    <h1 class="gridItem centerOnlyText" id = "Title">Title</h1>
+                    <p class="centerOnlyText" id="Desc">Desc</p>
+                </div>
+        
+            </div>
+        </div>
+
+        <div class="LayerItem ignoreTop gridContainer">
+            <div class="Padding gridContainer BlurBackground" id = "CollabProyectsButtonContainer">
+                <h2 class="gridItem">Collab proyects:</h2>
+
+                <button class="gridItem hide"></button>
+            </div>
+        </div>
+
+        <div id = "ContainerCollabProyects"></div>
+    </div>
+
+    <div class="background-container"></div>
+</body>
+</html>
