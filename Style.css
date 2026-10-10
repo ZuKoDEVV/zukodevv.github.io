@@ -1,0 +1,117 @@
+:root {
+	--border: rgb(255 136 0 / 20%);
+	--Background: rgb(118 80 47 / 20%);
+	--SelectedTextColor: rgb(255, 81, 0);
+	--DeselectedTextColor: rgb(255 255 255 / 50%);
+}
+
+html {
+	box-sizing: border-box;
+	transition: all ease-in-out;
+	background-color: rgb(37, 38, 44);
+	color: white;
+	font-family: Bahnschrift;
+	line-height: 1.6;
+	font-size: 0.7rem;
+}
+
+header{
+	position : fixed;
+	left : 0;
+	right : 0;
+	margin-left : auto;
+	margin-right : auto;
+	transform : none;
+	background-color: var(--Background);
+
+	display : flex;
+	justify-content : center;
+
+	border : 1px solid var(--border);
+	border-radius : 100px;
+
+	padding : 8px 32px;
+	top : 30px;
+	width : 90%;
+	height: 30px;
+}
+
+a{
+	color : white;
+	text-decoration:none
+}
+
+nav {
+	gap: 10px;
+	align-items: center;
+	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 0fr 1fr;
+	align-content: center;
+	flex: 1;
+}
+
+.OtherButtonsContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.InactiveSection {
+	opacity: 0
+}
+
+.vl {
+	border-left: 3px solid #ffffff26;
+	height: 30px;
+}
+
+.navLinks .selected, .navLinks li:hover {
+	background: rgb(79 63 55 / 39%);
+}
+
+.navLinks {
+	display: flex;
+	gap: 8px;
+	list-style: none;
+}
+
+/* NavLinks a */
+.navLinks .selected a {
+	color: var(--SelectedTextColor);
+	text-shadow: 0 0 25px rgb(255 181 76 / 30%);
+	font-size : 1rem
+}
+
+.navLinks a {
+	padding: 10px 20px;
+	color : var(--DeselectedTextColor)
+}
+
+.navLinks li {
+	list-style: none;
+	align-self: center;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+.guns-lolContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	width: 50%;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	transform: scale(.2);
+}
+
+	.guns-lolContainer img {
+		height: stretch;
+	}
+
+.guns-lolContainer a {
+	background-color: rgb(41 0 68 / 0.40);
+	border-radius: 100px;
+	border: 5px solid rgb(208 97 255 / 0.26);
+}
