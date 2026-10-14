@@ -9,20 +9,19 @@
 			document.addEventListener('DOMContentLoaded', () => {
 				InitPastWorkSections()
 				InitTags()
-				LoadSection('HomeSection')
 				ChangeCustomMouseIcon()
 			})
 		</script>
 	</head>
 
-	<body style="/*background-image: url(./Media/Backgrounds/DEV.jpg)*/">
+	<body style="/*background-image: url(./Media/Backgrounds/DEV.jpg)*/" data-page="portfolio">
 		<header id="MainHeader">
 			<nav>
 				<ul class="navLinks">
-					<li onclick="LoadSection('HomeSection')" class="selected"> <a id="HomeSection_LI">Home</a> </li>
-					<li onclick="LoadSection('PastWorksSection')"> <a id="PastWorksSection_LI">Past Proyects</a> </li>
-					<li onclick="LoadSection('ProgramerSection')"> <a id="ProgramerSection_LI">Programer</a> </li>
-					<li onclick="LoadSection('AnimatorSection')"> <a id="AnimatorSection_LI">Animator</a> </li>
+					<li class="selected"> <a id="HomeSection_LI" onclick="LoadSection('HomeSection')">Home</a> </li>
+					<li> <a id="PastWorksSection_LI" onclick="LoadSection('PastWorksSection')">Past Proyects</a> </li>
+					<li> <a id="ProgramerSection_LI" onclick="LoadSection('ProgramerSection')">Programer</a> </li>
+					<li> <a id="AnimatorSection_LI" onclick="LoadSection('AnimatorSection')">Animator</a> </li>
 				</ul>
 
 				<div class="vl"></div>

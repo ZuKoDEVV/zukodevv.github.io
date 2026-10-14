@@ -10,7 +10,23 @@ function LoadSection(Section) {
 
 	let Button = document.getElementById(`${Section}_LI`)
 	Button.parentElement.classList.add("selected")
+
+	let url = new URL(window.location.href)
+	url.searchParams.delete("section")
+	url.searchParams.append('section', Section)
+
+	// No c si alguien llegue a leer esto pero el try es pq al estar en file:// esta cosa no sirve
+	try {
+		window.history.pushState({}, '', url)
+	} catch { }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+	const pharams = new URLSearchParams(window.location.search)
+	const actualPageType = document.body.getAttribute("data-page")
+
+	LoadSection(pharams.get("section") || (actualPageType == "portfolio" && "HomeSection") || "WhoIm")
+})
 
 function LoadGallery(SectionName, Items = 10) {
 	const append = document.querySelector(`[data-past_container='${SectionName}']`).querySelector("[data-section_name='Gallery']")
