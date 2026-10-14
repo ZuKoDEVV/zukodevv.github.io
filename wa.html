@@ -1,15 +1,26 @@
 <head>
 	<title>ZuKoma | Normal Page :3</title>
 	<link rel="stylesheet" href="Style.css" />
-	<link rel="stylesheet" href="CustomMouse.css" />
+	<link rel="stylesheet" href="NoDEVStyle.css" />
+	<link rel="icon" href="./Media/Art/IconNoDEV.png" />
 	<script src="Main.js"></script>
+	<script src="NoDEV.js"></script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			LoadSection('WhoIm')
+			ToggleCustomMouse()
+			ChangeCustomMouse()
+		})
+	</script>
 </head>
 
-<header>
+<header id="MainHeader">
 	<nav>
 		<ul class="navLinks">
-			<li class="selected"> <a id="WhoIm_LI" onclick="LoadSection('WhoIm')">Who Im</a> </li>
+			<li class="selected"> <a id="WhoIm_LI" onclick="LoadSection('WhoIm')">About myself</a> </li>
 			<li> <a id="Hobbies_LI" onclick="LoadSection('Hobbies')">My Hobbies</a> </li>
+			<li> <a id="MyFursonas_LI" onclick="LoadSection('MyFursonas')">My Fursonas</a> </li>
 		</ul>
 
 		<div class="vl"></div>
@@ -19,18 +30,64 @@
 
 			<div class="guns-lolContainer">
 				<a href="https://guns.lol/zukodev" target="_blank" title="Guns.lol/zukodev (My socials)">
-					<img src="https://assets.guns.lol/favicon/apple-touch-icon.png" />
+					<img alt="Guns.lol/zukodev" src="https://assets.guns.lol/favicon/apple-touch-icon.png" />
+				</a>
+			</div>
+			
+			<div class="CustomCursor">
+				<a onclick="ChangeCustomMouse()">
+					<img />
 				</a>
 			</div>
 		</div>
-		
 	</nav>
 </header>
 
-<body>
+<body style="background-image: url(./Media/Backgrounds/NoDEV.png)">
 	<section id="WhoIm">
+		<h1 class="statTextPrimary">About Myself :3</h1>
+
+		<div class="divSubSection">
+			<div class="BaseContainerDIV">
+				<img src="./Media/Art/WhoIsThis.png" style="width: 250px;" />
+				<h1 class="statTextPrimary">Who im</h1>
+				<p>
+					Im <span class="statTextPrimary">ZuKoma</span>, a random stupid ass furry
+				</p>
+			</div>
+		</div>
+
+		<div class="divSubSection HorizontalSection">
+			<p class="BaseContainerDIV"><b class="statTextPrimary">Pronouns</b>He/Him</p>
+			<p class="BaseContainerDIV"><b class="statTextPrimary">Where im from</b>Colombia</p>
+			<p class="BaseContainerDIV"><b class="statTextPrimary">I love</b>Cats, my family, my friends, videogames and programing <3</p>
+		</div>
+
 	</section>
 
-	<section id="Sonas">
+	<section id="Hobbies">
+	</section>
+
+	<section id="MyFursonas">
+
+		<header id="headerFursonas" class="SubHeader">
+			<nav>
+				<p>My Fursonas :3</p>
+
+				<div class="vl"></div>
+
+				<ul class="navLinks" style=" flex-direction: row-reverse;">
+					<li class="selected"> <a id="ZuKo_LI" onclick="LoadFursonaSection('ZuKo')">ZuKoma</a> </li>
+					<li> <a id="Nymira_LI" onclick="LoadFursonaSection('Nymira')">Nymira</a> </li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="ZuKo">
+		</section>
+
+		<section id="Nymira">
+		</section>
+
 	</section>
 </body>

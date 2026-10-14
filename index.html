@@ -1,43 +1,283 @@
-<head>
-	<title>ZUKODEV | Developer Page</title>
-	<link rel="stylesheet" href="Style.css" />
-	<script src="Main.js" defer></script>
-</head>
+<html lang="en">
 
-<body>
-	<header>
-		<nav>
-			<ul class="navLinks">
-				<li class="selected"> <a id="HomeSection_LI" onclick="LoadSection('HomeSection')">Home</a> </li>
-				<li> <a id="PastWorksSection_LI" onclick="LoadSection('PastWorksSection')">Past Works</a> </li>
-				<li> <a id="ProgramerSection_LI" onclick="LoadSection('ProgramerSection')">Programer</a> </li>
-				<li> <a id="AnimatorSection_LI" onclick="LoadSection('AnimatorSection')">Animator</a> </li>
-			</ul>
+	<head>
+		<title>ZUKODEV | Developer Page</title>
+		<link rel="stylesheet" href="Style.css" />
+		<script src="Main.js"></script>
 
-			<div class="vl"></div>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				InitPastWorkSections()
+				InitTags()
+				LoadSection('HomeSection')
+				ChangeCustomMouseIcon()
+			})
+		</script>
+	</head>
 
-			<div class="OtherButtonsContainer">
-				<a href="wa.html" title="wa" class=".BaseButtonCol">No developer page :3</a>
+	<body style="/*background-image: url(./Media/Backgrounds/DEV.jpg)*/">
+		<header id="MainHeader">
+			<nav>
+				<ul class="navLinks">
+					<li onclick="LoadSection('HomeSection')" class="selected"> <a id="HomeSection_LI">Home</a> </li>
+					<li onclick="LoadSection('PastWorksSection')"> <a id="PastWorksSection_LI">Past Proyects</a> </li>
+					<li onclick="LoadSection('ProgramerSection')"> <a id="ProgramerSection_LI">Programer</a> </li>
+					<li onclick="LoadSection('AnimatorSection')"> <a id="AnimatorSection_LI">Animator</a> </li>
+				</ul>
 
-				<div class="guns-lolContainer">
-					<a href="https://guns.lol/zukodev" target="_blank" title="Guns.lol/zukodev (My socials)">
-						<img src="https://assets.guns.lol/favicon/apple-touch-icon.png" />
-					</a>
+				<div class="vl"></div>
+
+				<div class="OtherButtonsContainer">
+					<a href="wa.html" title="wa" class=".BaseButtonCol">No developer page :3</a>
+
+					<div class="guns-lolContainer">
+						<a href="https://guns.lol/zukodev" target="_blank" title="Guns.lol/zukodev (My socials)">
+							<img alt="Guns.lol/zukodev" src="https://assets.guns.lol/favicon/apple-touch-icon.png" />
+						</a>
+					</div>
+
+					<div class="CustomCursor">
+						<a onclick="ToggleCustomMouse()">
+							<img />
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<section id="HomeSection">
+			<h4>ZuKomaDEV</h4>
+			<h2>An Advanced Roblox Developer</h2>
+
+			<div class="divSubSection HorizontalSection">
+				<p class="BaseContainerDIV"><b class="statTextPrimary">13.1M+</b>Candela</p>
+				<p class="BaseContainerDIV"><b class="statTextPrimary">251.2K+</b>Nocturna</p>
+				<p class="BaseContainerDIV"><b class="statTextPrimary">38.5K+</b>A.Terminales</p>
+			</div>
+
+			<div class="divSubSection HorizontalSection">
+				<p class="BaseContainerDIV"><b class="statTextPrimary">ZKGames</b>Owner 😺</p>
+				<p class="BaseContainerDIV"><b class="statTextPrimary">NewCrest</b>Dev team Scripter</p>
+				<p class="BaseContainerDIV"><b class="statTextPrimary">Ex-A.Terminales</b>Co-Owner</p>
+			</div>
+
+			<div class="divSubSection HorizontalSection">
+				<div class="BaseContainerDIV">
+					<h1 class="statTextPrimary">No full time developer yet</h1>
+					<p>
+						Due to some personal reasons <b class="statTextPrimary">i cannot develop 24/7 at the moment</b> 😭
+					</p>
+				</div>
+
+				<div class="BaseContainerDIV">
+					<h1 class="statTextPrimary">+3</h1>
+					<p>
+						Years of experience
+					</p>
+				</div>
+
+				<div class="BaseContainerDIV">
+					<h1 class="statTextPrimary">+40</h1>
+					<p>
+						Animations made
+					</p>
 				</div>
 			</div>
-		</nav>
-	</header>
+		</section>
 
-	<section id="PastWorksSection">
-		<p>hi</p>
-	</section>
+		<section id="PastWorksSection" style="padding: 0px 32px ">
+			<header class="SubHeader">
+				<nav>
+					<ul class="navLinks">
+						<li class="selected"><a>All Past proyects</a></li>
+					</ul>
+				</nav>
+			</header>
 
-	<section id="HomeSection">
-	</section>
+			<h1 class="statTextPrimary">Past proyects</h1>
+			<p>Here i'll show you some of my past proyects (specificly abandoned / unfinished / finished proyects)</p>
 
-	<section id="ProgramerSection">
-	</section>
+			<div class="divSubSection">
+				<!-- EZQUIVAR CONTAINER -->
+				<div class="BaseContainerDIV" data-past_container="Ezquivar">
+					<h1 class="statTextPrimary ">Ezquivar <a class="idkHowCallThisA" title="The date when i was developing this">(04/01/2023) - (08/03/2023)</a></h1>
 
-	<section id="AnimatorSection">
-	</section>
-</body>
+					<div class="Tags">
+						<p class="baseContainerDIV" id="Abandoned"></p>
+						<p class="baseContainerDIV" id="Solo_Proyect"></p>
+						<p class="baseContainerDIV" id="Public"></p>
+					</div>
+
+					<br />
+
+					<header class="SubHeader">
+						<nav>
+							<ul class="navLinks">
+							</ul>
+						</nav>
+					</header>
+
+					<br />
+
+					<div class="BaseContainerDIV" data-section_name="DevHistory">
+						<h2 class="statTextPrimary" style="margin:0">Developement History</h2>
+
+						<p>
+							Ezquivar was <span class="statTextPrimary">my first roblox proyect</span>
+							and heavly (for not say a copy) inspired from Evade but of course i haved NO experience with roblox
+							and then i got fustrated and leaved the proyect<br /> thanks of it i learn a little about programation
+						</p>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Gameplay">
+						<h2 class="statTextPrimary " style="margin:0">Gameplay</h2>
+						<p>
+							The main gameplay was just run and escape from nextbots inspired from Nico's Nexbots and Evade a prety bored game if you think it
+						</p>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Gallery" data-images=12>
+						<h2 class="statTextPrimary " style="margin:0 0 25px">Gallery</h2>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Links">
+						<h2 class="statTextPrimary" style="margin:0">Links</h2>
+						<a href="https://roblox.com/games/12965892928/" target="_blank">
+							● Ezquivar Game Page
+						</a>
+					</div>
+				</div>
+
+				<!-- THE ODD FOREST CONTAINER -->
+				<div class="BaseContainerDIV" data-past_container="THOD">
+					<h1 class="statTextPrimary ">The Odd Forest <a class="idkHowCallThisA" title="The date when i was developing this">(08/08/2023) - (12/05/2023)</a></h1>
+					<div class="Tags">
+						<p class="baseContainerDIV" id="Abandoned"></p>
+						<p class="baseContainerDIV" id="Duo_Proyect"></p>
+						<p class="baseContainerDIV" id="Public"></p>
+					</div>
+
+					<br />
+
+					<header class="SubHeader">
+						<nav>
+							<ul class="navLinks">
+							</ul>
+						</nav>
+					</header>
+
+					<br />
+
+					<div class="BaseContainerDIV" data-section_name="DevHistory">
+						<h2 class="statTextPrimary" style="margin:0">Developement History</h2>
+
+						<p>
+							The Odd Forest <span class="statTextPrimary">was my second proyect</span>,
+							I LOVE this proyect because was thanks of this i really fell in love with
+							programing / scripting in roblox also this game was originally created for a school proyect with a friend,
+							no one take our proyect serious but yea it was funny<br /><br />
+							Also thanks of this i learn more than with Ezquivar<br /><br />
+
+							<span style="color: red">#$&"!"(=)/#$&"</span>
+						</p>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Gameplay">
+						<h2 class="statTextPrimary " style="margin:0">Gameplay</h2>
+						<p>
+							The main gameplay was you are in a ancient forest (idk why) and you need to search an exit
+							you find some resources but there is also a dangerous entities, you pass across a lot of escenarios like
+							caves, forest, and a laboratory?<br /><br />oh also at the end is a Persecution :D
+						</p>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Gallery" data-images=32>
+						<h2 class="statTextPrimary " style="margin:0 0 25px">Gallery</h2>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Links">
+						<h2 class="statTextPrimary" style="margin:0">Links</h2>
+						<a href="https://roblox.com/games/14363987548/" target="_blank">
+							● The Odd Forest Game Page
+						</a>
+					</div>
+				</div>
+
+				<!-- THE LAST CONTACT CONTAINER -->
+				<div class="BaseContainerDIV" data-past_container="TLC">
+					<h1 class="statTextPrimary ">
+						The last contact [Roblox Developer gamejam] <a class="idkHowCallThisA" title="The date when i was developing this">(02/06/2026) - (02/09/2026)</a>
+					</h1>
+
+					<div class="Tags">
+						<p class="baseContainerDIV" id="Unfinished"></p>
+						<p class="baseContainerDIV" id="Solo_Proyect"></p>
+						<p class="baseContainerDIV" id="Public"></p>
+						<p class="baseContainerDIV" id="ZKGames"></p>
+					</div>
+
+					<br />
+
+					<header class="SubHeader">
+						<nav>
+							<ul class="navLinks">
+							</ul>
+						</nav>
+					</header>
+					<br />
+
+					<div class="BaseContainerDIV" data-section_name="DevHistory">
+						<h2 class="statTextPrimary" style="margin:0">Developement History</h2>
+
+						<p>
+							<b class="statTextPrimary">I REALLY REALLY LOVE THIS PROYECT</b> (before OUTSTEP)<br /><br />
+							This game <span class="statTextPrimary">was the first time i participate on a gamejam</span>
+							(spoiler i didnt won), we have like 72 hours limit to make a game with the temathic
+							<span class="statTextPrimary">FIRST contact</span>
+							(heh get it the <span class="statTextPrimary">last </span>contact heheh)<br /><br />
+							but there is a problem, i didnt haved enough time to make the game in 72 hours so i made it in
+							<span class="statTextPrimary">24 hours</span>, i really liked the resuts due to the short time i had<br /><br /><br />
+							<span class="statTextPrimary">I have plans to continue the game ;3c</span>
+						</p>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Gameplay">
+						<h2 class="statTextPrimary " style="margin:0">Gameplay</h2>
+						<p>
+							The main gameplay was simple, you're a person who get separated to someone important to you after a
+							<span class="statTextPrimary">Last Contact</span>, then you get teleported to a strange "pacific" world<br /><br />
+							I love the camera mechanics that provides a 2.5D perspective also inspired from Crash Bandicoot also the cam
+							changes in certain parts<br /><br />The character mechanics are also simple: Wall Jump, M1's
+							and also you needed to defeat some enemies<br /><br />
+							The game basicly was just a infinite linear run defeating enemies and like every 30 rooms you get into a space place where you can get some boosts (i didnt finished this)
+						</p>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Gallery" data-images=14>
+						<h2 class="statTextPrimary " style="margin:0 0 25px">Gallery</h2>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Links">
+						<h2 class="statTextPrimary" style="margin:0">Links</h2>
+						<a href="https://devforum.roblox.com/t/roblox-developer-challenge-2026/4274705" target="_blank">
+							● DevForum Roblox Developer Challenge
+						</a>
+						<a href="https://devforum.roblox.com/t/roblox-developer-challenge-2026/4274705/317?u=zukoodev" target="_blank">
+							● The last contact sublimition reply :3
+						</a>
+						<a href="https://roblox.com/games/111526388526251" target="_blank">
+							● The last contact game page
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="ProgramerSection">
+		</section>
+
+		<section id="AnimatorSection">
+		</section>
+	</body>
+</html>

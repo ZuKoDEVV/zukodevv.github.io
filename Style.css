@@ -1,44 +1,164 @@
 :root {
-	--border: rgb(255 136 0 / 20%);
-	--Background: rgb(118 80 47 / 20%);
+	--border: rgb(0 0 0 / 20%);
+	--Background: rgb(0 0 0 / 66%);
 	--SelectedTextColor: rgb(255, 81, 0);
 	--DeselectedTextColor: rgb(255 255 255 / 50%);
 }
 
 html {
 	box-sizing: border-box;
-	transition: all ease-in-out;
 	background-color: rgb(37, 38, 44);
 	color: white;
 	font-family: Bahnschrift;
-	line-height: 1.6;
-	font-size: 0.7rem;
+	font-weight: lighter;
+	font-size: .8rem;
 }
 
-header{
-	position : fixed;
-	left : 0;
-	right : 0;
-	margin-left : auto;
-	margin-right : auto;
-	transform : none;
-	background-color: var(--Background);
+body {
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	margin: 0;
+}
 
-	display : flex;
-	justify-content : center;
-
-	border : 1px solid var(--border);
-	border-radius : 100px;
-
-	padding : 8px 32px;
-	top : 30px;
-	width : 90%;
+header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	transform: none;
+	display: flex;
+	justify-content: center;
+	border: 1px solid var(--border);
+	border-radius: 100px;
+	padding: 8px 32px;
+	top: 30px;
+	width: 90%;
 	height: 30px;
 }
 
-a{
-	color : white;
-	text-decoration:none
+
+.image-container {
+	display: grid;
+	width: 100%;
+	gap: 2px;
+	height: 250px;
+	grid-template-columns: repeat(3, 1fr);
+	overflow-x: hidden;
+	border-radius: 15px
+}
+
+.image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform .2s ease-in-out;
+	cursor: pointer;
+	border-radius: 10px
+}
+
+.image-container img:hover {
+	cursor: pointer
+}
+
+.subHeader {
+	position: static;
+	top: auto;
+	scale: .9;
+}
+
+.Tags {
+	display: grid;
+	grid-auto-flow: column;
+	gap: 15px;
+	justify-content: start;
+	align-content: center;
+}
+
+.Tags p {
+	padding: 5px 10px 5px 10px;
+}
+
+.Tags p#Solo_Proyect{
+	background-color: rgb(0, 28, 74)
+}
+
+.Tags p#Duo_Proyect {
+	background-color: rgb(1, 78, 0)
+}
+
+.Tags p#Abandoned {
+	background-color: rgb(63, 53, 53)
+}
+
+.Tags p#UnFinished {
+	background-color: rgb(79, 0, 0)
+}
+
+.Tags p#ZKGames {
+	background-color: rgb(211, 41, 0);
+	color: white;
+	border-color: rgb(255 255 255 / .6)
+}
+
+.baseContainerDIV, header, #headerFursonas {
+	background-color: var(--Background);
+	border-radius: 30px;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+section, .divSubSection {
+	position: absolute;
+	display: grid;
+	top: 90px;
+	padding: 32px;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	border-radius: 50px;
+	gap: 20px;
+	justify-items: stretch;
+}
+
+.statTextPrimary {
+	color: var(--SelectedTextColor);
+	text-shadow: 0px 0px 20px var(--SelectedTextColor);
+}
+
+.divSubSection {
+	position: static;
+	background: rgba(0 0 0 / 0);
+	padding: 0;
+	margin-left: initial;
+	color: var(--DeselectedTextColor);
+	width: 70%
+}
+
+img{
+	border-radius: 25px
+}
+
+a {
+	color:aqua;
+	text-decoration: none
+}
+
+header a {
+	margin: 0
+}
+
+.idkHowCallThisA {
+	color: var(--SelectedTextColor);
+	cursor: pointer
+}
+
+.CustomCursor {
+	transform: scale(.5);
+	display:flex
 }
 
 nav {
@@ -51,6 +171,32 @@ nav {
 	flex: 1;
 }
 
+nav p{
+	margin: 0;
+}
+
+.baseContainerDIV {
+	padding: 15px;
+	border-radius: 20px;
+	display: grid;
+	grid-auto-flow: row;
+	align-items: center;
+}
+
+.baseContainerDIV b{
+	font-size: 1.2rem;
+	line-height: 2rem
+}
+
+p, h1, h2, h3, h4, a{
+	margin: 10px 0 0 0;
+}
+
+.HorizontalSection {
+	display: grid;
+	grid-auto-flow: column;
+}
+
 .OtherButtonsContainer {
 	display: flex;
 	align-items: center;
@@ -59,7 +205,7 @@ nav {
 }
 
 .InactiveSection {
-	opacity: 0
+	display:none
 }
 
 .vl {
@@ -67,17 +213,18 @@ nav {
 	height: 30px;
 }
 
+/* NavLinks */
 .navLinks .selected, .navLinks li:hover {
-	background: rgb(79 63 55 / 39%);
+	background: rgb(79 63 55 / 39%);	
 }
 
 .navLinks {
 	display: flex;
-	gap: 8px;
+	gap: 10px;
 	list-style: none;
+	white-space: nowrap;
 }
 
-/* NavLinks a */
 .navLinks .selected a {
 	color: var(--SelectedTextColor);
 	text-shadow: 0 0 25px rgb(255 181 76 / 30%);
@@ -85,15 +232,16 @@ nav {
 }
 
 .navLinks a {
-	padding: 10px 20px;
-	color : var(--DeselectedTextColor)
+	color : var(--DeselectedTextColor);
 }
 
 .navLinks li {
+	padding: 0 20px;
 	list-style: none;
 	align-self: center;
 	border-radius: 100px;
 	cursor: pointer;
+	transition: all .4s cubic-bezier(0, 0, 0.36, 1);
 }
 
 .guns-lolContainer {
@@ -106,9 +254,9 @@ nav {
 	transform: scale(.2);
 }
 
-	.guns-lolContainer img {
-		height: stretch;
-	}
+.guns-lolContainer img {
+	height: stretch;
+}
 
 .guns-lolContainer a {
 	background-color: rgb(41 0 68 / 0.40);

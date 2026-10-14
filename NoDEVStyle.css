@@ -1,0 +1,8 @@
+:root {
+    --Background: rgba(0, 0, 0, 0.151);
+}
+
+.baseContainerDIV, header, #headerFursonas {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+}
