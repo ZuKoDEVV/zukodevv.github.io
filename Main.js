@@ -1,3 +1,24 @@
+const TagsIDs = [
+	"Abandoned",
+	"Public",
+	"Reworked",
+	"ZKGames",
+	"Unfinished",
+	"Game",
+	"Plugin"
+]
+
+const Tags = {
+	Abandoned: "This proyect is TOTALLY abandoned, but in some cases it get a Rework",
+	Public: "You <span class='statTextPrimary'>can find this proyect everywhere</span>",
+	Reworked: "This proyect was remade by 0 see <span class='statTextPrimary'>current proyects</span> or the other version can also be find here",
+	ZKGames: "This proyect was published in <span class='statTextPrimary'>ZKGames</span>",
+	Unfinished: "This proyect <span class='statTextPrimary'>isnt finished yet</span>",
+	Game: "This is self explanatory",
+	Plugin: "Also self explanatory",
+	"Betatest_Only": "This proyect is <span class='statTextPrimary'>only avaiable </span> to ZKGames <span class='statTextPrimary'>betatesters</span>"
+}
+
 function LoadSection(Section) {
 	document.querySelectorAll("section").forEach((section) => {
 		section.classList.add("InactiveSection")
@@ -49,7 +70,7 @@ function LoadGallery(SectionName, Items = 10) {
 }
 
 function ChangeCustomMouseIcon(IconRoot="ZuKoCursor/Default.png") {
-	document.getElementsByClassName("CustomCursor").item(0).querySelector("img").setAttribute("src", `./Media/Art/Cursor/${IconRoot}`)
+	document.getElementById("CustomMouseIcon").querySelector("img").setAttribute("src", `./Media/Art/Cursor/${IconRoot}`)
 }
 
 function ToggleCustomMouse() {
@@ -93,10 +114,90 @@ function ChangeCustomMouse(){
 	}
 }
 
+let ActiveFilters = []
+let FilterButtons = []
+
+function UpdateTagsFilter() {
+	FilterButtons.forEach((li) => {
+		if (ActiveFilters.find((str) => str == li.getAttribute("data-filter"))) {
+			li.classList.add("selected")
+		} else {
+			li.classList.remove("selected")
+		}
+	})
+
+	document.getElementById("DisableFilters").classList.value = (ActiveFilters.length == 0 && ["selected"]) || []
+}
+
+function ClearTagsFilter() {
+	ActiveFilters = []
+	UpdateTagsFilter()
+}
+
 function InitTags() {
+	const tagFilterNav = document.getElementById("TagsFilterNav")
+	const NavLinks = tagFilterNav.querySelector(".navLinks")
+
+	const p = document.createElement("p")
+	p.classList.add("ExtraInfo")
+
 	document.querySelectorAll(".Tags").forEach((tagContainer) => {
-		tagContainer.querySelectorAll(".baseContainerDIV").forEach((p) => {
-			p.textContent = `● ${p.id.replaceAll("_", " ")}`
+		tagContainer.querySelectorAll(".BaseContainerDIV").forEach((a) => {
+			a.textContent = `● ${a.id.replaceAll("_", " ")}`
+
+			if (Tags[a.id]) {
+				a.setAttribute("data-description", Tags[a.id])
+			}
+		})
+	})
+
+	UpdateTagsFilter()
+
+	p.addEventListener("mouseover", function () {
+		p.classList.add("InactiveSection")
+		document.body.appendChild(p)
+	})
+
+	document.querySelectorAll("[data-description]").forEach((wa) => {
+		wa.addEventListener("mouseover", function () {
+			wa.appendChild(p)
+			p.innerHTML = wa.getAttribute("data-description")
+			p.classList.remove("InactiveSection")
+		})
+
+		wa.addEventListener("mouseout", function () {
+			p.classList.add("InactiveSection")
+		})
+	})
+
+	TagsIDs.forEach((str) => {
+		const li = document.createElement("li")
+		const a = document.createElement("a")
+
+		li.setAttribute("data-filter", str)
+		a.textContent = str
+
+		NavLinks.appendChild(li)
+		li.appendChild(a)
+
+		FilterButtons.push(li)
+	})
+
+	tagFilterNav.querySelectorAll("li").forEach((li) => {
+		li.querySelector("a").addEventListener("click", function () {
+			const filter = li.getAttribute("data-filter")
+
+			if (!ActiveFilters.find((str) => str == filter)) {
+				ActiveFilters.push(filter)
+			} else {
+				ActiveFilters.forEach((str, TagIndex) => {
+					if (str == filter) {
+						ActiveFilters.splice(TagIndex, 1)
+					}
+				})
+			}
+
+			UpdateTagsFilter()
 		})
 	})
 }
@@ -136,7 +237,7 @@ function InitPastWorkSections(){
 			li.id = SectionName
 
 			const a = document.createElement("a")
-			a.text = SectionName
+			a.text = SectionName.replaceAll("_", " ")
 
 			li.appendChild(a)
 			ul.appendChild(li)

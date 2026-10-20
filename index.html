@@ -1,18 +1,20 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
 <html lang="en">
 
-	<head>
-		<title>ZUKODEV | Developer Page</title>
-		<link rel="stylesheet" href="Style.css" />
-		<script src="Main.js"></script>
-
-		<script>
-			document.addEventListener('DOMContentLoaded', () => {
-				InitPastWorkSections()
-				InitTags()
-				ChangeCustomMouseIcon()
-			})
-		</script>
-	</head>
+<head>
+	<title>ZUKODEV | Developer Page</title>
+	<link rel="stylesheet" href="Style.css" />
+	<link rel="stylesheet" href="ToDo.css" />
+	<script src="Main.js"></script>
+	<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						ChangeCustomMouseIcon()
+						InitTags()
+						InitPastWorkSections()
+					})
+	</script>
+</head>
 
 	<body style="/*background-image: url(./Media/Backgrounds/DEV.jpg)*/" data-page="portfolio">
 		<header id="MainHeader">
@@ -20,6 +22,7 @@
 				<ul class="navLinks">
 					<li class="selected"> <a id="HomeSection_LI" onclick="LoadSection('HomeSection')">Home</a> </li>
 					<li> <a id="PastWorksSection_LI" onclick="LoadSection('PastWorksSection')">Past Proyects</a> </li>
+					<li> <a id="CurrentProyectsSection_LI" onclick="LoadSection('CurrentProyectsSection')">Current Proyects</a> </li>
 					<li> <a id="ProgramerSection_LI" onclick="LoadSection('ProgramerSection')">Programer</a> </li>
 					<li> <a id="AnimatorSection_LI" onclick="LoadSection('AnimatorSection')">Animator</a> </li>
 				</ul>
@@ -35,7 +38,7 @@
 						</a>
 					</div>
 
-					<div class="CustomCursor">
+					<div class="navDivIcon" id="CustomMouseIcon">
 						<a onclick="ToggleCustomMouse()">
 							<img />
 						</a>
@@ -45,12 +48,10 @@
 		</header>
 
 		<section id="HomeSection">
-			<h4>ZuKomaDEV</h4>
+			<h4>ZuKomaDEV / Very WIP Portfolio Page</h4>
 			<h2>An Advanced Roblox Developer</h2>
 
 			<div class="divSubSection HorizontalSection">
-				<p class="BaseContainerDIV"><b class="statTextPrimary">13.1M+</b>Candela</p>
-				<p class="BaseContainerDIV"><b class="statTextPrimary">251.2K+</b>Nocturna</p>
 				<p class="BaseContainerDIV"><b class="statTextPrimary">38.5K+</b>A.Terminales</p>
 			</div>
 
@@ -82,13 +83,29 @@
 					</p>
 				</div>
 			</div>
+
+			<hr />
+
+			<h1 class="statTextPrimary">No lies so, here is the prof of my job</h1>
+			<p style="color: var(--DeselectedTextColor); margin: 0;">I cannot think on a better Quote</p>
+
+			<div class="divSubSection HorizontalSection">
+				<style>
+					a:hover {
+						cursor: pointer
+					}
+				</style>
+
+				<a onclick="LoadSection('AnimatorSection')" class="BaseContainerDIV statTextPrimary">Animator</a>
+				<a onclick="LoadSection('ProgramerSection')" class="BaseContainerDIV statTextPrimary">Programer / Scripter</a>
+			</div>
 		</section>
 
 		<section id="PastWorksSection" style="padding: 0px 32px ">
 			<header class="SubHeader">
-				<nav>
+				<nav id="TagsFilterNav">
 					<ul class="navLinks">
-						<li class="selected"><a>All Past proyects</a></li>
+						<li class="selected" id="DisableFilters"><a onclick="ClearTagsFilter()">All Past proyects</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -102,9 +119,10 @@
 					<h1 class="statTextPrimary ">Ezquivar <a class="idkHowCallThisA" title="The date when i was developing this">(04/01/2023) - (08/03/2023)</a></h1>
 
 					<div class="Tags">
-						<p class="baseContainerDIV" id="Abandoned"></p>
-						<p class="baseContainerDIV" id="Solo_Proyect"></p>
-						<p class="baseContainerDIV" id="Public"></p>
+						<a class="BaseContainerDIV" id="Game"></a>
+						<a class="BaseContainerDIV" id="Abandoned"></a>
+						<a class="BaseContainerDIV" id="Public"></a>
+						<a class="BaseContainerDIV" id="Reworked"></a>
 					</div>
 
 					<br />
@@ -151,9 +169,9 @@
 				<div class="BaseContainerDIV" data-past_container="THOD">
 					<h1 class="statTextPrimary ">The Odd Forest <a class="idkHowCallThisA" title="The date when i was developing this">(08/08/2023) - (12/05/2023)</a></h1>
 					<div class="Tags">
-						<p class="baseContainerDIV" id="Abandoned"></p>
-						<p class="baseContainerDIV" id="Duo_Proyect"></p>
-						<p class="baseContainerDIV" id="Public"></p>
+						<a class="BaseContainerDIV" id="Game"></a>
+						<a class="BaseContainerDIV" id="Abandoned"></a>
+						<a class="BaseContainerDIV" id="Public"></a>
 					</div>
 
 					<br />
@@ -205,14 +223,14 @@
 				<!-- THE LAST CONTACT CONTAINER -->
 				<div class="BaseContainerDIV" data-past_container="TLC">
 					<h1 class="statTextPrimary ">
-						The last contact [Roblox Developer gamejam] <a class="idkHowCallThisA" title="The date when i was developing this">(02/06/2026) - (02/09/2026)</a>
+						The last contact [Roblox Developer gamejam] <a class="idkHowCallThisA" title="The date when i was developing this">(Feb 06 2026) - (Feb 09 2026)</a>
 					</h1>
 
 					<div class="Tags">
-						<p class="baseContainerDIV" id="Unfinished"></p>
-						<p class="baseContainerDIV" id="Solo_Proyect"></p>
-						<p class="baseContainerDIV" id="Public"></p>
-						<p class="baseContainerDIV" id="ZKGames"></p>
+						<a class="BaseContainerDIV" id="Game"></a>
+						<a class="BaseContainerDIV" id="Unfinished"></a>
+						<a class="BaseContainerDIV" id="Public"></a>
+						<a class="BaseContainerDIV" id="ZKGames"></a>
 					</div>
 
 					<br />
@@ -269,6 +287,148 @@
 						</a>
 					</div>
 
+				</div>
+
+				<!-- ZKPrecense CONTAINER -->
+				<div class="BaseContainerDIV" data-past_container="TLC">
+					<h1 class="statTextPrimary ">
+						ZKPresense <a class="idkHowCallThisA" title="The date when i was developing this (the start date is aproximate)">(Jun 18 2026) - (Apr 05 2026)</a>
+					</h1>
+
+					<div class="Tags">
+						<a class="BaseContainerDIV" id="Plugin"></a>
+						<a class="BaseContainerDIV" id="Unfinished"></a>
+						<a class="BaseContainerDIV" id="Public"></a>
+						<a class="BaseContainerDIV" id="ZKGames"></a>
+					</div>
+
+					<br />
+
+					<header class="SubHeader">
+						<nav>
+							<ul class="navLinks">
+							</ul>
+						</nav>
+					</header>
+					<br />
+
+					<div class="BaseContainerDIV" data-section_name="DevHistory">
+						<h2 class="statTextPrimary" style="margin:0">Developement History</h2>
+
+						<p>
+							This proyect was a pretty simple plugin that allowed to connect Discord with Studio but
+							i have some problems with some people because this uses http and a external program (idk whats wrong with that)
+							and i leaved the proyect<br />
+							But a short time ago i saw some ways to recreate the plugin
+							<span class="statTextPrimary">without a external program</span> ill rework the plugin but not for now :'c
+						</p>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="How_Works">
+						<h2 class="statTextPrimary" style="margin:0">How this plugin works</h2>
+
+						<p>
+							This plugin worked so simple you download the server (an Python app) and the Roblox Plugin and yep thats it<br />
+							The plugin has a lot of customizations like Testing State, Icons, Add up to 2 buttons etc<br /><br />
+							I loved something that i make on this plugin and it was the ZKApi that allowed another plugins to create their
+							own states :3<br />
+							But also this plugin is so buggy specially when you have more than 1 RobloxStudio instance running<br />
+						</p>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Links">
+						<h2 class="statTextPrimary" style="margin:0">Links</h2>
+						<a href="https://devforum.roblox.com/t/3822916" target="_blank">
+							● DevForum ZKPresence
+						</a>
+						<a href="https://devforum.roblox.com/t/4433265" target="_blank">
+							● DevForum ZKApi
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="CurrentProyectsSection">
+			<div class="divSubSection">
+				<div class="BaseContainerDIV" data-past_container="OUTSTEP">
+					<h1 class="statTextPrimary ">OUTSTEP <a class="idkHowCallThisA" title="The date when the development started">(04/01/2026)</a></h1>
+
+					<div class="Tags">
+						<a class="BaseContainerDIV" id="Game"></a>
+						<a class="BaseContainerDIV" id="Betatest_Only"></a>
+						<a class="BaseContainerDIV Reworked" data-description="This is the 3rd rework of Ezquivar :3" id="Ezquivar_Rework"></a>
+					</div>
+
+					<br />
+
+					<header class="SubHeader">
+						<nav>
+							<ul class="navLinks">
+							</ul>
+						</nav>
+					</header>
+
+					<br />
+
+					<div class="BaseContainerDIV" data-section_name="DevHistory">
+						<h2 class="statTextPrimary" style="margin:0">Developement History</h2>
+
+						<p>
+							<span class="statTextPrimary">OUTSTEP...</span> I FREAKING LOVE THIS SHIT<br /><br />
+							OUTSTEP is my biggest proyect at the moment, its basically a parkour game with random special rounds,
+							<a href="https://en.wikipedia.org/wiki/Non-Euclidean_geometry" target="_blank">non euclidean portals</a>
+							inspired from <a style="color:palevioletred" href="https://store.steampowered.com/app/1229490/" target="_blank"> ULTRAKILL</a> and
+							<a href="https://store.steampowered.com/app/400" target="_blank">Portal</a>, Gravity changers (also inspired in ULTRAKILL)
+							and of course an history that conects one of my "abandoned" proyects<br />OUTSTEP a diference of the another
+							versions it is totally made by 0 and also taked its own development way<br /><br />At the moment OUTSTEP
+							still WIP its pretty hard to make because the Non Euclidean Portals, Mirrors, etc require a lot of maths
+							but yea i have to admit i used AI just for that, but its also so fun to a make hard things like bots,
+							Special rounds, The intro of the game and a lot more i love this shit<br /><br />OUTSTEP will probably get in
+							Early Access (Public beta) at end of this year or at the start of 2027
+						</p>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Gameplay">
+						<h2 class="statTextPrimary " style="margin:0">Gameplay</h2>
+						<p>
+							The gameplay...<br />
+							This will take me a lot of time to say so...<br /><br />
+							In OUTSTEP the parkour and perks are your main movement here you need to learn at least the basics to survive,
+							also here exists A̶̧̪̒̔̈́̂͘.̶̢̺̘̥͐̎̐̀͠ͅU̸̬̩̲͋̇̿.̶̀̔͆̚ͅR̴̫̔̀̃͌͜ͅ.̴̼̫̄̐́͋̋O̴̡͙̰̲̞͊.̷͍̯̻̣̄Ŗ̷̣̥͈̑.̴͔̻͚͗̈̉A̶͇̗̘̙͊͒̕͜<br /><br /><br /><br />
+							Y̵̧̦̻̲̣̰̜͎̲̜̲͛̾͑̑̿͂͆͗-̵̹̹̠͓̰̽̋̒y̴̧̞͔͈͕̯̟̬̒̃̈́̀̔͊͐͐̉̽̓͠ͅǫ̵̧̡̧̡̛̛̯̲͔̯͙͇̬̮̠̫̭͓̀̾̓͋̐͋͆́̑͋͐̑͆̑́͝ͅu̸̡͎͖̬̠͉͖̗͍̺̬͚̳̬̣̳͝r̵̼̄͛̋͌̅̄́͗͋̌̄͆́̐̆̈́͝-̴̨̧̼̘̜̫͐̈́́̓́̆̏͑̈́ ̵̡͎̫͓̈́̈́̉̑̽̀̌̄̀̆̍͜͜͝͝n̶̨̢̯̠̯̯̲̘͕̱̭̤̳̣̣̱̏͆͑́̈́̓̓̈̿̑́̔̎̒͌͝-̴͙̲͚̍̾͑̅̈̈́͂͜n̸̨̨̰̮̦̻̱̗͖̹̝͈̏͂̇̊͛̈́́̾̌̕̕͘͘͝͝ę̵̠͔̹̬͈̹͍̭̤͆̉̊̊̉̿̇ͅ-̴̡̧̢͕̫̪̭̼̺̘̝͈̫̍͐́̿̈́̓̓̾̋̕͝ṅ̶̢̢͎̦̬̪̱̖͇̫̪̲̮̺͇̥̳̆͒͐̐̍͂̓̔̇͛̈͜ȩ̶̛͎̣͚̙̝̲̱͖̳̤̰̣̙̲̤̼͊͐̀̂̌͋̀̇͆͛̎̂̾̅̕͠ͅw̷̛̛̛̞̲̩͎̗͚̼̳̱͍̜̬̲̟̠̰̫͐̔͗͌̿̍̌̀͊̔͠͝ͅ ̵̢̻̞̲̖̃̑͑̓̍̒̊̏̇́̊͑͘͝f̵̧̪̜͙͔̩̬͖͆̍̅̓̓͆̅̍̆͛̚̕͘͜͝-̵͍̞̗͍͉̝͔̪̘͉̉͘͜ͅf̴̢̛͈̫̗̻̗̦̦̥͚̗̤͎̣͍̞̯͎͂͋̍̋͌͛̊-̶̡̡̪͇̠̻̹̪̠͈̈́̾̐̔͂̒̋͂̓̄̚ͅf̵̢̠̝̮̞̻̣͍̲͓̔͑̾̔̎̊͑͑̀͘r̵̢̖͙͙͎̺̥͇̬̗̰̮̲̙̣̈͊͗͝i̵̧̢̧̧̢̹̼̭̣̬̙̼͚̝̝͘͜͜ę̶̢̛͚̯͌͗͊̉̎͗͊͂͑͑̈̇͘͝͝͝͠ņ̶̯̩̄̅̀̑̂̀̍̋̈́̇́̊͌̑̾͜d̶̛̛̛͚̬̩̬͇̣̘̖̬͙͖̂̏̉̉͂̂̀͌̍́̀͛̈͘̚
+							<br />
+							T̶̟͖̞̜̫̀̅Ḥ̶̪̠̰͕̀̽̓̍̃̒̉̽̅̿͝E̶̛̟͚̪̼̹̍̇̔̿͐̔̆͌̈̄̌͗̈́͝ ̶͍̼͙̪̬̗̝͓̝̹͔̥̉̇̃ͅƠ̷̭͎̞͚̠̼̱͚̠̘͖̬̻̣̏̓W̴̨͙̖̩͔̤̩̆͊̽̀͐̋̚N̴̢̜̻̼͖͊̅̈́̊E̸͖̙̱̘̦̦͓͂̓̎͌̉̓̈̃͛̄͘͠͠͝ͅŖ̷̢͓͖̰̼̯̙̰̈̀̈́͑͂͆͂͋̉͑͘͝ ̶̡̡̛̙̱̠̀́͑́̾ͅǪ̶͈̙͍̩͕͓̗̳̞͛̈́̏̊F̶̛̺̙͍̗̥̗͎̞̙̘̅͛̊̿͆̀̉̕ͅ ̷̼͖̉͌̓̍̄͌͑̏̕̕T̴͉̘̟̠̺̣̰̘͓̯̗̫̻̭͚̆͋̒̈́̈́̓͒̅͐̓͂̐̚͝H̸̨̙̮̙̼̙̲͕̼̯͌͂̽̽͜I̸̤̫̱̝͉̻̪̞̺̲̱͇̯͒̈́̈́͊͆̅́͋̕͝ͅȘ̵̡̨̫̪̝̬̌̈̓̏̚͠ ̷̺̹̪̜̑̊̀̀̍̌͂̐̑̿̚̚͝͝͝Ḩ̶̲̬̘͔̬͖̜͑̄Ě̷̛̹͙̠͎̣͕̬͖̖̉̓̀̀̄̔̌̀͗͋̋̈̃͜Ļ̶̡͍͎͙͇̖̝͇̣͙̩̣̇̄̌͒̋̚ͅL̸̞͛̐̓͒̀̏͋̈́̿̃̇͛̍̚
+							<br /><br /><br /><br />
+							Damn... i think i lost the plot :p<br />
+							In OUTSTEP are Gravity changers, so what does this means, you can walk in roof at the same time someone is chasing you
+							in the floor
+						</p>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="To_do_list">
+						<h2 class="statTextPrimary " style="margin:0">Things to do before OUTSTEP came in Public Access</h2>
+						<ul class="ToDoUL">
+							<li class="checked">Have the idea of the game</li>
+							<li>Make at least 20 special rounds (5/20)</li>
+							<li>Make 5 sub special rounds (1/5)</li>
+							<li>Finish the parkour system</li>
+							<li>Finish the intro</li>
+							<li>Add at least 2 perks (0/2)</li>
+						</ul>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Gallery" data-images=12>
+						<h2 class="statTextPrimary" style="margin:0 0 25px">Gallery</h2>
+					</div>
+
+					<div class="BaseContainerDIV" data-section_name="Links">
+						<h2 class="statTextPrimary" style="margin:0">Links</h2>
+						<a href="https://roblox.com/games/127348809298937/" target="_blank">
+							● OUTSTEP Game Page
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>

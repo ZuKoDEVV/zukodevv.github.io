@@ -1,11 +1,11 @@
 body {
-    cursor: url(../Media/Art/Cursor/ZuKoCursor/Default.png), default
+	cursor: url(../Media/Art/Cursor/ZuKoCursor/Default.png), default
 }
 
-a:hover, li:hover, .image-container img:hover {
-    cursor: url(../Media/Art/Cursor/ZuKoCursor/Pointer.png), pointer
+a:hover, .image-container img:hover {
+	cursor: url(../Media/Art/Cursor/ZuKoCursor/Pointer.png), pointer
 }
 
 p:hover, h1:hover, h4:hover, h2:hover {
-    cursor: url(../Media/Art/Cursor/ZuKoCursor/TextHover.png), pointer
+	cursor: url(../Media/Art/Cursor/ZuKoCursor/TextHover.png), pointer;
 }

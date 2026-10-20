@@ -2,7 +2,7 @@ body {
     cursor: url(../Media/Art/Cursor/NymiraCursor/Default.png), default
 }
 
-a:hover, li:hover, .image-container img:hover {
+a:hover, .image-container img:hover {
     cursor: url(../Media/Art/Cursor/NymiraCursor/Pointer.png), pointer
 }
 
