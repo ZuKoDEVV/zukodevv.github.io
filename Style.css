@@ -279,13 +279,18 @@ p, h1, h2, h3, h4, a {
 	justify-content: flex-end;
 }
 
-.InactiveSection {
-	display: none
-}
+	.OtherButtonsContainer a{
+		margin: 0 20px 0 20px
+	}
+
+	.InactiveSection {
+		display: none
+	}
 
 .vl {
 	border-left: 3px solid #ffffff26;
 	height: 30px;
+	margin: 0px 10px 0 20px;
 }
 
 /* NavLinks */
@@ -318,24 +323,4 @@ p, h1, h2, h3, h4, a {
 			border-radius: 100px;
 			cursor: pointer;
 			transition: all .4s cubic-bezier(0, 0, 0.36, 1);
-		}
-
-	.guns-lolContainer {
-		display: flex;
-		align-items: center;
-		flex-direction: row-reverse;
-		width: 50%;
-		justify-content: flex-start;
-		flex-wrap: nowrap;
-		transform: scale(.2);
-	}
-
-		.guns-lolContainer img {
-			height: stretch;
-		}
-
-		.guns-lolContainer a {
-			background-color: rgb(41 0 68 / 0.40);
-			border-radius: 100px;
-			border: 5px solid rgb(208 97 255 / 0.26);
 		}

@@ -1,8 +1,44 @@
 :root {
-    --Background: rgba(0, 0, 0, 0.151);
+	--Background: rgba(0, 0, 0, 0.151);
 }
 
-.baseContainerDIV, header, #headerFursonas {
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px); /* Safari support */
+.BaseContainerDIV, header, #headerFursonas {
+	backdrop-filter: blur(5px);
 }
+
+.SocialPreDiv {
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	height: 50px;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+
+	.SocialPreDiv a {
+		height: 100%;
+		width: 100%;
+		transition: all ease-in-out .2s;
+		margin: 10px;
+		text-shadow: inherit;
+	}
+
+	.SocialPreDiv svg, .SocialPreDiv img {
+		height: 100%;
+		width: 100%;
+		object-fit: scale-down;
+		color: white;
+		border-radius: 0;
+		filter: drop-shadow(0px 0px 20px rgb(255 255 255 / 0.4));
+		transition: all ease-in-out .2s;
+	}
+
+	.SocialPreDiv a:hover{
+		transform: scale(1.1)
+	}
+
+		.SocialPreDiv a:hover svg, .SocialPreDiv a:hover img {
+			filter: drop-shadow(0px 0px 10px rgb(255 255 255 / 0.7));
+		}
