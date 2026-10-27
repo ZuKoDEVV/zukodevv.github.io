@@ -239,7 +239,7 @@ nav {
 	gap: 10px;
 	align-items: center;
 	justify-content: space-between;
-	display: grid;
+	display: flex;
 	grid-template-columns: 1fr 0fr 1fr;
 	align-content: center;
 	flex: 1;
@@ -252,10 +252,10 @@ nav {
 
 .BaseContainerDIV {
 	padding: 15px;
-	border-radius: 20px;
-	display: grid;
-	grid-auto-flow: row;
-	align-items: center;
+    border-radius: 20px;
+    display: grid;
+    align-items: center;
+    flex-direction: column;
 }
 
 	.BaseContainerDIV b {
@@ -280,7 +280,8 @@ p, h1, h2, h3, h4, a {
 }
 
 	.OtherButtonsContainer a{
-		margin: 0 20px 0 20px
+		margin: 0 20px 0 20px;
+		white-space: nowrap;
 	}
 
 	.InactiveSection {

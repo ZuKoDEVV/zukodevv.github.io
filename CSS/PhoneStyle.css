@@ -1,0 +1,57 @@
+@media (max-width: 768px) {
+    header{
+        height: 5%;
+        overflow-y: hidden;
+        overflow-x: auto;
+        padding: 4px 11px;
+    }
+
+    section, .divSubSection{
+        padding: 0;
+        text-align: center;
+        width: 90%;
+        margin: 0 5% 5%;
+    }
+
+    .BaseContainerDiv{
+        width: 100%;
+    }
+
+    .SocialPreDiv{
+        height: auto;
+        gap: 2px;
+        grid-auto-flow: row;
+        justify-content: flex-start;
+        justify-items: end;
+        align-items: start;
+        grid-template-columns: 50fr 50fr;
+    }
+
+    .SocialPreDiv a{
+    	max-width: initial;
+        max-height: 40px;
+    }
+
+    .navLinks{
+        height: 100%;
+    }
+
+    .HorizontalSection{
+        grid-auto-flow: row
+    }
+
+    nav{
+        align-items: center;
+        justify-content: center;
+        gap: 0
+    }
+
+    #CustomMouseIcon, #PreCustomMouse, #SocialUrlPreview{
+        display: none;
+    }
+
+    .navLinks li{
+        height: 100%;
+        align-content: center;
+    }
+}

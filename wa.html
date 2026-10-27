@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <meta charset="utf-8" />
 <html>
-	<head>
-		<title>ZuKoma • Normal Page :3</title>
-		<link rel="stylesheet" href="Style.css" />
-		<link rel="stylesheet" href="NoDEVStyle.css" />
-		<link rel="icon" href="./Media/Art/IconNoDEV.png" />
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>ZuKoma • :3 page</title>
+
+		<link rel="stylesheet" href="CSS/MainStyle.css" />
+		<link rel="stylesheet" href="CSS/NoDEVStyle.css" />
+		<link rel="stylesheet" href="CSS/PhoneStyle.css" />
+
+		<link rel="icon" href="./Media/Art/Icons/NoDevIcon.png" />
+
 		<script src="Main.js"></script>
 		<script src="NoDEV.js"></script>
 
-		<script>
+	<script>
 document.addEventListener('DOMContentLoaded', () => {
-	ToggleCustomMouse()
-	ChangeCustomMouse()
-	InitSocialsAnim()
+			ToggleCustomMouse()
+			ChangeCustomMouse()
+			InitSocialsAnim()
 })
-		</script>
-	</head>
+	</script>
+</head>
 
 	<body style="background-image: url(./Media/Backgrounds/NoDEV.png)" data-page="NoDEV">
 		<header id="MainHeader">
@@ -33,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				<div class="OtherButtonsContainer">
 					<a href="index.html" title="wa">Developer page</a>
 
-					<div class="vl"></div>
+					<div class="vl" id="PreCustomMouse"></div>
 
 					<div class="navDivIcon" id="CustomMouseIcon">
 						<a onclick="ChangeCustomMouse()">
