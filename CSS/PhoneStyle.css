@@ -6,6 +6,10 @@
         padding: 4px 11px;
     }
 
+    .SubHeader{
+        height: 30px;
+    }
+
     section, .divSubSection{
         padding: 0;
         text-align: center;
@@ -42,7 +46,7 @@
 
     nav{
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 0
     }
 
