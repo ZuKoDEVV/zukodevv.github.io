@@ -6,14 +6,20 @@
 	backdrop-filter: blur(5px);
 }
 
-.SocialPreDiv {
-	display: grid;
-	justify-items: center;
-	align-items: center;
-	justify-content: center;
-	gap: 15px;
-	height: 50px;
-	grid-auto-flow: column;
+.SocialsMainDiv{
+	position: relative;
+    width: 40%;
+    left: 25%;
+}
+
+.SocialPreDiv {    
+	display: flex;
+    justify-items: center;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+	flex-wrap: wrap;
+	flex-grow: 1;
 }
 
 	.SocialPreDiv a {
@@ -23,6 +29,7 @@
 		margin: 10px;
     	max-width: 50%;
 		text-shadow: inherit;
+		flex-basis: 45px;
 	}
 
 	.SocialPreDiv svg, .SocialPreDiv img {
