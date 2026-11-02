@@ -1,15 +1,71 @@
 :root {
-	--Background: rgba(0, 0, 0, 0.151);
+	--Background: rgba(0 0 0 / 0.151);
+	--Background-alt: rgb(9 13 27 / 85%);
 }
 
-.BaseContainerDIV, header, #headerFursonas {
+.BaseContainerDIV, header, .headerFursonas {
 	backdrop-filter: blur(5px);
+}
+
+#FursonasContainer{
+	padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+	.ContainerFursonasWiki{
+		width: 60%;
+		padding: 24px 36px;
+		border-radius: 10px;
+		background-color: var(--Background-alt);
+		align-items: normal;
+	}
+
+	.BaseWikiContainer{
+		border: 1px solid rgba(255, 255, 255, 0.25);
+		padding: 10px;
+	}
+
+	.BaseWikiContainer .HorizontalSection{
+		width: auto;
+	}
+
+	.BaseWikiContainer .divSubSection *{
+		flex: 1;
+	}
+
+	.mainTitle{
+		margin: 10px 0 20px;
+	}
+
+	.title{
+		text-align: center;
+	}
+
+	a.title{
+		font-size: 2em;
+		font-weight: bold;
+	}
+
+	.ContainerFursonasWiki hr{
+		margin: 20px 0
+	}
+
+.ulFursonasButtons{
+	overflow-y: hidden;
+    overflow-x: auto;
 }
 
 .SocialsMainDiv{
 	position: relative;
     width: 40%;
     left: 25%;
+}
+
+.headerFursonas ul.navLinks{
+    flex-direction: row-reverse;
 }
 
 .SocialPreDiv {    

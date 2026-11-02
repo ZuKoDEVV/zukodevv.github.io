@@ -21,14 +21,22 @@
         width: 100%;
     }
 
+    .SocialsMainDiv{
+        left: auto;
+        width: auto;
+    }
+
+    .headerFursonas ul.navLinks{
+        flex-direction: row;
+        padding: 15px 0 15px 0;
+    }
+
     .SocialPreDiv{
         height: auto;
-        gap: 2px;
-        grid-auto-flow: row;
+        gap: 5px;
         justify-content: flex-start;
         justify-items: end;
         align-items: start;
-        grid-template-columns: 50fr 50fr;
     }
 
     .SocialPreDiv a{
@@ -47,7 +55,8 @@
     nav{
         align-items: center;
         justify-content: flex-start;
-        gap: 0
+        gap: 0;
+        padding: 5px;
     }
 
     #CustomMouseIcon, #PreCustomMouse, #SocialUrlPreview{

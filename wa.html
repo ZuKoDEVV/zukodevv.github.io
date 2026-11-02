@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="CSS/NoDEVStyle.css" />
 		<link rel="stylesheet" href="CSS/PhoneStyle.css" />
 
-		<link rel="icon" href="./Media/Art/Icons/NoDevIcon.png" />
+		<link rel="icon" href="./Media/Art/Icons/NoDevIcon.ico" />
 
 		<script src="Main.js"></script>
 		<script src="NoDEV.js"></script>
@@ -75,31 +75,93 @@ document.addEventListener('DOMContentLoaded', () => {
 		</section>
 
 		<section id="MyFursonas">
+			<div class="BaseContainerDIV" style="background-color: orange">
+				<h2 style="margin: 0; color: black;">This Part of this website is in spanish because im not translating this :'c</h2>
+			</div>
 
-			<header id="headerFursonas" class="SubHeader">
+			<hr style="margin: 30px 0 30px;"/>
+
+			<header class="SubHeader headerFursonas">
 				<nav>
-					<p>My Fursonas :3</p>
+					<p>My Sonas (OCS)</p>
 
 					<div class="vl"></div>
 
-					<ul class="navLinks" style=" flex-direction: row-reverse;">
-						<li class="selected"> <a id="ZuKo_LI" onclick="LoadFursonaSection('ZuKo')">ZuKoma</a> </li>
-						<li> <a id="Nymira_LI" onclick="LoadFursonaSection('Nymira')">Nymira</a> </li>
+					<ul class="navLinks" id="ulFursonasButtons">
 					</ul>
 				</nav>
 			</header>
 
-			<section id="ZuKo">
-			</section>
+			<div id="FursonasContainer">
+				<div id="ZuKoma">
+					<h1 class="statTextPrimary title">ZuKoma</h1>
+					<p class="title" style="color: var(--DeselectedTextColor);">No el <span class="statTextPrimary"><b>NO ES</b></span> un self insert</p>
+					
+					<hr />
 
-			<section id="Nymira">
-			</section>
+					<a class="statTextPrimary title mainTitle" id="openDiv" data-Div="Descripcion_General"></a>
+					<div id="Descripcion_General" class="InactiveSection BaseWikiContainer">
+						<h2 class="title mainTitle">Biologia</h2>
+
+						<div class="divSubSection HorizontalSection">
+							<div>
+								<h2 class="statTextPrimary">Raza</h2>
+								<p>Keith</p>
+							</div>
+
+							<div class="vl"></div>
+
+							<div>
+								<h2 class="statTextPrimary">Especie</h2>
+								<p>
+									<b>Hibrido:</b> Gato 
+									<span class="statTextPrimary">Naranja</span> 
+									y Murcielago Desmodus rotundus (Murcielago Vampiro)</p>
+							</div>
+						</div>
+						
+						<br/>
+
+						<div>
+							<p>
+								ZuKoma es un gato naranja con blanco, con 2 rayas cafes en los cachetes (a cada lado) con 
+								forma de triangulo curvo, en la frente tiene otra raya cafe de forma triangular
+							</p>
+						</div>
+					</div>
+
+					<hr />
+
+					<a class="statTextPrimary title mainTitle" id="openDiv" data-Div="Trivia"></a>
+
+					<div id="Trivia" class="InactiveSection">
+						<p>wawa</p>
+					</div>
+
+					<hr />
+
+					<a class="statTextPrimary title mainTitle" id="openDiv" data-Div="Galeria"></a>
+					<div id="Galeria" class="InactiveSection">
+						<p>wawa</p>
+					</div>
+				</div>
+
+				<div id="Nymira">
+				</div>
+
+				<div id="Zepht">
+				</div>
+
+				<div id="Fernir">
+				</div>
+			</div>
 
 		</section>
 
 		<section id="Socials">
 			<div class="BaseContainerDIV SocialsMainDiv">
-				<h1 class="statTextPrimary" style="margin: 5px 0 25px; text-align:center">All my socials :3</h1>
+				<h1 class="statTextPrimary" style="margin: 5px 0 10px; text-align:center">All my socials :3</h1>
+				<p style="margin: 5px 0 15px; color: var(--DeselectedTextColor); text-align:center">Or also some random links</p>
 
 				<hr style="margin: 0px 0px 20px;" />
 

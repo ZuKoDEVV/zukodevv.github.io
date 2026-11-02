@@ -7,11 +7,11 @@
 
 html {
 	box-sizing: border-box;
-	background-color: rgb(37, 38, 44);
 	color: white;
 	font-family: Bahnschrift;
 	font-weight: lighter;
 	font-size: .8rem;
+	overflow-y: scroll;
 }
 
 body {
@@ -21,6 +21,7 @@ body {
 	background-position: center;
 	background-attachment: fixed;
 	margin: 0;
+	background-color: rgb(37, 38, 44);
 }
 
 header {
@@ -172,13 +173,10 @@ hr {
 	color: white;
 	z-index: 1;
 	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
+	user-select: none
 }
 
-.BaseContainerDIV, header, #headerFursonas {
+.BaseContainerDIV, header {
 	background-color: var(--Background);
 	border-radius: 30px;
 	border: 1px solid rgba(255, 255, 255, 0.25);
@@ -205,12 +203,21 @@ section, .divSubSection {
 
 .divSubSection {
 	position: static;
+	display: flex;
+	flex-direction: column;
 	background: rgba(0 0 0 / 0);
 	padding: 0;
 	margin-left: initial;
 	/*color: var(--DeselectedTextColor);*/
 	width: 70%
 }
+	.divSubSection *{
+		flex-grow: 1;
+	}
+
+	.divSubSection .vl{
+		height: auto;
+	}
 
 img {
 	border-radius: 25px
@@ -243,7 +250,8 @@ nav {
 	grid-template-columns: 1fr 0fr 1fr;
 	align-content: center;
 	flex: 1;
-	width: 100%
+	width: 100%;
+	white-space: nowrap;
 }
 
 	nav p {
@@ -253,7 +261,7 @@ nav {
 .BaseContainerDIV {
 	padding: 15px;
     border-radius: 20px;
-    display: grid;
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
@@ -268,8 +276,7 @@ p, h1, h2, h3, h4, a {
 }
 
 .HorizontalSection {
-	display: grid;
-	grid-auto-flow: column;
+	flex-direction: row;
 }
 
 .OtherButtonsContainer {
@@ -281,7 +288,6 @@ p, h1, h2, h3, h4, a {
 
 	.OtherButtonsContainer a{
 		margin: 0 20px 0 20px;
-		white-space: nowrap;
 	}
 
 	.InactiveSection {
@@ -290,8 +296,10 @@ p, h1, h2, h3, h4, a {
 
 .vl {
 	border-left: 3px solid #ffffff26;
-	height: 30px;
-	margin: 0px 10px 0 20px;
+	height: 100%;
+	margin: 0 20px;
+	width: 0;
+	flex-grow: 0;
 }
 
 /* NavLinks */
