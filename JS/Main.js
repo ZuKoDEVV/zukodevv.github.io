@@ -62,7 +62,7 @@ function LoadGallery(SectionName, Items = 10) {
 
 	for (let i = 1; i < Items; i++){
 		const img = document.createElement("img")
-		img.setAttribute("src", `./Media/PastProyects/${SectionName}/${i}.png`)
+		img.setAttribute("src", `../Media/PastProyects/${SectionName}/${i}.png`)
 		div.appendChild(img)
 	}
 
@@ -70,7 +70,7 @@ function LoadGallery(SectionName, Items = 10) {
 }
 
 function ChangeCustomMouseIcon(IconRoot="ZuKoCursor/Default.png") {
-	document.getElementById("CustomMouseIcon").querySelector("img").setAttribute("src", `./Media/Art/Cursor/${IconRoot}`)
+	document.getElementById("CustomMouseIcon").querySelector("img").setAttribute("src", `../Media/Art/Cursor/${IconRoot}`)
 }
 
 function ToggleCustomMouse() {
@@ -100,11 +100,11 @@ function ChangeCustomMouse(){
 		const ActualActive = AlredyExist.getAttribute("data-active_cursor_css")
 
 		if (ActualActive === "ZuKoCursor") {
-			AlredyExist.setAttribute("href", "./Cursors/NymiCursor.css")
+			AlredyExist.setAttribute("href", "../Cursors/NymiCursor.css")
 			ChangeCustomMouseIcon("ZuKoCursor/Default.png")
 
 		} else {
-			AlredyExist.setAttribute("href", "./Cursors/ZuKoCursor.css")
+			AlredyExist.setAttribute("href", "../Cursors/ZuKoCursor.css")
 			ChangeCustomMouseIcon("NymiraCursor/Default.png")
 		}
 
