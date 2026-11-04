@@ -266,14 +266,19 @@ nav {
     flex-direction: column;
 }
 
+[data-section_name="Links"]{
+	width: 90%;
+}
+
+	.alignLeft{
+		align-items: flex-start;
+	}
+
 	.BaseContainerDIV b {
 		font-size: 1.2rem;
 		line-height: 2rem
 	}
-
-	.alignLeft{
-		align-items: start;
-	}
+	
 
 p, h1, h2, h3, h4, a {
 	margin: 10px 0 0 0;
@@ -336,4 +341,5 @@ p, h1, h2, h3, h4, a {
 			border-radius: 100px;
 			cursor: pointer;
 			transition: all .4s cubic-bezier(0, 0, 0.36, 1);
+			text-align: center;
 		}
