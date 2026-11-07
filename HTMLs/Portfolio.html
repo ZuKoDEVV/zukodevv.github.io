@@ -13,13 +13,24 @@ permalink: /Portfolio
 	<link rel="stylesheet" href="../CSS/MainStyle.css" />
 	<link rel="stylesheet" href="../CSS/PhoneStyle.css" />
 	<link rel="icon" href="../Media/Art/Icons/NoDevIcon.ico" />
+
 	<script src="../JS/Main.js"></script>
+	<script src="../JS/External/Particles.js"></script>
+
+	<style>
+		body{
+			background-color: rgb(21 17 24);
+		}
+	</style>
+
 	<script>
-					document.addEventListener("DOMContentLoaded", function () {
-						ChangeCustomMouseIcon()
-						InitTags()
-						InitPastWorkSections()
-					})
+		document.addEventListener("DOMContentLoaded", function () {
+			ChangeCustomMouseIcon()
+			InitTags()
+			InitPastWorkSections()
+
+			particlesJS.load("particlesContainer", '../JS/External/particlesConfig.json')
+		})
 	</script>
 </head>
 
@@ -443,5 +454,7 @@ permalink: /Portfolio
 
 		<section id="AnimatorSection">
 		</section>
+
+		<div id="particlesContainer"></div>
 	</body>
 </html>
